@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const Discord = require('discord.js')
 const keepAlive = require("./server")
-var token = process.env.TOKEN
+require("dotenv").config();
+
+var token = process.env.BOT_TOKEN
 app.listen(() => console.log("Boombox"));
  
 app.use('/ping', (req, res) => {
@@ -74,5 +76,3 @@ client.on('guildMemberAdd', member => {
   member.send("Welcome to" + member.guild.name + " Have a great day!!");
 });
 client.login(token);
-
-
