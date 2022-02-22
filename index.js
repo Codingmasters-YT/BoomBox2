@@ -73,6 +73,6 @@ fs.readdir('./commands/', (err, files) => {
 client.on('guildMemberAdd', member => {
   member.send("Welcome to" + member.guild.name + " Have a great day!!");
 });
-client.login(client.config.token_bot);
+client.login(process.env.TOKEN);
 
 
